@@ -1,0 +1,6 @@
+#ifndef _DESCRIBESCENE_H_INCLUDED
+#define _DESCRIBESCENE_H_INCLUDED
+
+void describe_scene();
+
+#endif // DESCRIBESCENE_H_INCLUDED
