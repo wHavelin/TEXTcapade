@@ -10,13 +10,14 @@
 #include <iostream>
 #include "item.h"
 
-void run_program(std::string module_file, std::string scene_file)
+void run_program(std::string module_file, std::string scene_file, std::string encounter_file)
 {
-    std::vector<scene> sceneList;
+    std::vector<scene> scene_list;
     std::vector<item> item_database;
     std::map<std::string, int> attributes;
+	std::vector<encounter> encounter_list;
     std::string module_name;
-    load_module(module_file,scene_file, module_name, attributes, item_database, sceneList);
+    load_module(module_file,scene_file, encounter_file, module_name, attributes, item_database, encounter_list, scene_list);
     std::cout << module_name << "\n";
     bool hasWon = false;
     bool hasLost = false;

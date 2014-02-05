@@ -10,11 +10,18 @@
 #include "load_equipment.h"
 #include "load_scenes.h"
 #include "scene.h"
+#include "load_encounters.h"
 
 using std::string;
 
-void load_module(string game_file, string scene_file, string & module_name, std::map<string, int> & attributes,
-                std::vector<item> & item_database, std::vector<scene> & scene_list)
+void load_module(string & game_file, 
+	string & scene_file, 
+	string & encounter_file, 
+	string & module_name, 
+	std::map<string, int> & attributes,
+	std::vector<item> & item_database, 
+	std::vector<encounter> & encounter_list, 
+	std::vector<scene> & scene_list)
 {
     std::ifstream game_file_stream(game_file);
     string current_line;
@@ -31,5 +38,6 @@ void load_module(string game_file, string scene_file, string & module_name, std:
         throw file_load_error();
     load_attributes(game_file_stream, attributes);
     load_equipment(game_file_stream, item_database);
-    load_scenes(scene_file, scene_list);
+	load_encounters(encounter_file, encounter_list);
+    load_scenes(scene_file, scene_list, encounter_list);
 }

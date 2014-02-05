@@ -5,6 +5,6 @@
 #include<vector>
 #include "scene.h"
 
-void load_scenes(std::string & scene_file, std::vector<scene> & scene_list);
+void load_scenes(std::string & scene_file, std::vector<scene> & scene_list, std::vector<encounter> & encounter_list);
 
 #endif // LOADSCENES_H_INCLUDED

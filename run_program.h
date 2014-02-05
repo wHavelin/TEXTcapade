@@ -2,6 +2,6 @@
 #define _RUN_PROGRAM_H_INCLUDED
 #include <string>
 
-void run_program(std::string module_file, std::string game_file);
+void run_program(std::string module_file, std::string game_file, std::string encounter_file);
 
 #endif // RUN_PROGRAM_H_INCLUDED

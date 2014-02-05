@@ -7,7 +7,7 @@ int main()
 {
     try
     {
-        run_program("AgainIntoTheDark.txt", "AgainIntoTheDarkScenes.txt");
+        run_program("AgainIntoTheDark.txt", "AgainIntoTheDarkScenes.txt", "AgainIntoTheDarkEncounters.txt");
 		std::cout << "test";
 		while(true){
 		}
